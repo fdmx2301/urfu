@@ -1,0 +1,62 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build with GLFW (Linux)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=gnu++17",
+                "${workspaceFolder}/src/app.cpp",
+                "${workspaceFolder}/src/GlslShader.cpp",
+                "-I${workspaceFolder}/GL/linux/include",
+                "-L${workspaceFolder}/GL/linux/lib",
+                "-lGLEW",
+                "-lglfw3",
+                "-lGL",
+                "-lX11",
+                "-lXrandr",
+                "-lXi",
+                "-lXcursor",
+                "-lXinerama",
+                "-ldl",
+                "-lm",
+                "-pthread",
+                "-o",
+                "${workspaceFolder}/app"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "build with GLFW (Windows - MinGW)",
+            "type": "shell",
+            "command": "x86_64-w64-mingw32-g++",
+            "args": [
+                "-std=gnu++17",
+                "${workspaceFolder}/src/app.cpp",
+                "${workspaceFolder}/src/GlslShader.cpp",
+                "-I${workspaceFolder}/GL/windows/include",
+                "-L${workspaceFolder}/GL/windows/lib",
+                "-L${workspaceFolder}/GL/windows/bin",
+                "-lglew32",
+                "-lglfw3",
+                "-lopengl32",
+                "-lgdi32",
+                "-luser32",
+                "-lkernel32",
+                "-o",
+                "${workspaceFolder}/app.exe"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
