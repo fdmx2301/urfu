@@ -25,10 +25,7 @@
                 "-o",
                 "${workspaceFolder}/app"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
+            "group": "build",
             "problemMatcher": [
                 "$gcc"
             ]
@@ -53,7 +50,10 @@
                 "-o",
                 "${workspaceFolder}/app.exe"
             ],
-            "group": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "problemMatcher": [
                 "$gcc"
             ]
