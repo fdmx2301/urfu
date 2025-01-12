@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build with GLFW (Linux)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=gnu++17",
+                "${workspaceFolder}/src/main.cpp",
+                "${workspaceFolder}/src/app.cpp",
+                "${workspaceFolder}/src/GlslShader.cpp",
+                "-I${workspaceFolder}/GL/include",
+                "-I${workspaceFolder}/GL/include/glm",
+                "-L${workspaceFolder}/GL/lib",
+                "-lGLEW",
+                "-lglfw3",
+                "-lGL",
+                "-lX11",
+                "-lXrandr",
+                "-lXi",
+                "-lXcursor",
+                "-lXinerama",
+                "-ldl",
+                "-lm",
+                "-pthread",
+                "-o",
+                "${workspaceFolder}/app"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
