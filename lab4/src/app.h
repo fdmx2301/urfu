@@ -6,6 +6,7 @@
 #include <stdlib.h>
 
 #include "GlslShader.h"
+#include "SimpleCamera.h"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -34,7 +35,7 @@ class App {
         vec3 modelPos;
         vec3 modelScale;
         vec3 axis;
-        float angle;
+        vec3 angles;
         float moveStep;
 
         GLFWwindow* getWindow() {
@@ -45,7 +46,9 @@ class App {
         int width, height;
         GLFWwindow* window;
         GlslShader shader;
+        SimpleCamera camera;
         mat4 globalMVP;
         mat4 model;
         GLuint vertexBuffer;
+        GLuint colorBuffer;
 };

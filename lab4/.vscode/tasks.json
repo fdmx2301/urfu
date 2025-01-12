@@ -10,6 +10,7 @@
                 "${workspaceFolder}/src/main.cpp",
                 "${workspaceFolder}/src/app.cpp",
                 "${workspaceFolder}/src/GlslShader.cpp",
+                "${workspaceFolder}/src/SimpleCamera.cpp",
                 "-I${workspaceFolder}/GL/include",
                 "-I${workspaceFolder}/GL/include/glm",
                 "-L${workspaceFolder}/GL/lib",
